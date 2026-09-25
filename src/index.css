@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #FAFAFA;
+  color: #09090B;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}
+
+:focus-visible {
+  outline: 2px solid #047857;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.clamp-hero {
+  font-size: clamp(3rem, 9.5vw, 7.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+}
+
+.clamp-h2 {
+  font-size: clamp(1.75rem, 3.8vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+#readme-body h1, #readme-body h2, #readme-body h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+  color: #09090B;
+  letter-spacing: -0.02em;
+}
+#readme-body h1 { font-size: 1.5rem; }
+#readme-body h2 { font-size: 1.25rem; }
+#readme-body h3 { font-size: 1.1rem; }
+#readme-body p { margin-bottom: 0.85em; line-height: 1.7; color: #3f3f46; }
+#readme-body ul, #readme-body ol { margin: 0 0 0.85em 1.25em; }
+#readme-body li { margin-bottom: 0.3em; color: #3f3f46; }
+#readme-body code { background: #f4f4f5; padding: 0.15em 0.4em; border-radius: 4px; font-size: 0.85em; }
+#readme-body pre { background: #18181B; color: #f4f4f5; padding: 1em; border-radius: 10px; overflow-x: auto; margin-bottom: 1em; }
+#readme-body pre code { background: transparent; padding: 0; }
+#readme-body a { color: #047857; text-decoration: underline; }
+#readme-body img { max-width: 100%; border-radius: 8px; margin: 0.5em 0; }
+#readme-body blockquote { border-left: 3px solid #047857; padding-left: 1em; color: #52525b; margin-bottom: 0.85em; }
+
